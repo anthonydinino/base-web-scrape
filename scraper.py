@@ -7,7 +7,6 @@ import concurrent.futures
 def scrape(url):
   browser = get_browser(headless=False)
   browser.get(url)
-  browser.quit()
   return {"data" : "selenium response data"}
 
 def get_browser(headless=True):

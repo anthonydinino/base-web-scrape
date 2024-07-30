@@ -13,7 +13,7 @@ services:
       - 8000:8000
     volumes:
       - ./:/usr/src/app
-    command: ["gunicorn", "app:app", "-b", "0.0.0.0:8000"]
+    command: ["gunicorn", "app:app", "-b", "0.0.0.0:8000", "-t", "600"]
   chrome:
     image: selenium/node-chrome:4.19.1-20240402
     shm_size: 2gb
